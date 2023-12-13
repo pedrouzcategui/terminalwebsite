@@ -1,0 +1,25 @@
+body {
+  background: #111;
+  color: green;
+  font-family: monospace;
+}
+#terminal_text {
+  width: 50%;
+}
+#terminal {
+  border: 0px;
+  background: transparent;
+  color: green;
+  outline: none;
+  font-family: monospace;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  margin-bottom: 5px;
+}
+b {
+  text-transform: uppercase;
+  font-weight: 800;
+}
