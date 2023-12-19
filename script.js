@@ -27,6 +27,10 @@ const commands = [
     name: "nudes",
     desc: "See my nudes",
   },
+  {
+    name: "kill",
+    desc: "kills the website",
+  },
 ];
 
 const projects = [
@@ -91,6 +95,12 @@ function handleCommand(cmd) {
       case "clear":
         result = "";
         cleanTerminal();
+        break;
+      case "kill":
+        result = "";
+        document.body.innerHTML = "";
+        document.getElementById("stylesheet").remove();
+        document.title = "404 Not Found";
         break;
     }
   }
