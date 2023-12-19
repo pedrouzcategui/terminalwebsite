@@ -3,8 +3,11 @@ body {
   color: green;
   font-family: monospace;
 }
+a {
+  color: greenyellow;
+}
 #terminal_text {
-  width: 50%;
+  width: 60%;
 }
 #terminal {
   border: 0px;
@@ -22,4 +25,10 @@ li {
 b {
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin-bottom: 20px;
 }

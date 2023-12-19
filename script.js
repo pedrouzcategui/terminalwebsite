@@ -32,14 +32,17 @@ const commands = [
 const projects = [
   {
     name: "Agency Dashboard",
+    url: "https://example.com",
     desc: "ReTool + SQL",
   },
   {
     name: "Vuela Barato",
+    url: "https://example.com",
     desc: "Best prices on traveling, Next.js + Prisma",
   },
   {
     name: "Compiler",
+    url: "https://example.com",
     desc: "Made my own compiler because why not",
   },
 ];
@@ -55,11 +58,11 @@ function handleCommand(cmd) {
   if (commands.find((x) => x.name == cmd)) {
     switch (cmd) {
       case "help":
-        result = "<ul>";
+        result = "<div class='grid'>";
         commands.map((_cmd) => {
-          result += `<li><b>${_cmd.name}</b> - ${_cmd.desc}</li>`;
+          result += `<div> - ${_cmd.name}</div>  <div>${_cmd.desc}</div>`;
         });
-        result += "</ul>";
+        result += "</div>";
         break;
       case "whoami":
         let date = new Date();
@@ -75,7 +78,7 @@ function handleCommand(cmd) {
       case "projects":
         result = "<ul>";
         projects.map((project) => {
-          result += `<li><b>${project.name}</b> - ${project.desc}</li>`;
+          result += `<li><a href='${project.url}'><b>${project.name}</b></a> - ${project.desc}</li>`;
         });
         result += "</ul>";
         break;
